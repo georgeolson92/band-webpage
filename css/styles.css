@@ -5,7 +5,7 @@ body {
 
 #page-wrap {
   margin: 40px auto 60px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -26,8 +26,7 @@ body {
 .main {
   width: 70%;
   float: left;
-  /*border: 1px solid black;*/
-  /*display: table-cell;*/
+
 }
 
 .main h2 {
@@ -110,5 +109,27 @@ body {
 @media screen and (min-width:430px){
   .column {
     width: 45%;
+  }
+}
+
+@media print {
+  #page-wrap {
+    margin: 0;
+  }
+  .main {
+    display: table;
+    width: 100%;
+    float: none;
+  }
+  .sidebar{
+    width: 100%;
+    float: none;
+    background-color: white;
+  }
+  .column img{
+    max-width: 200px;
+    max-height: 200px;
+    float: left;
+    margin-right: 5px;
   }
 }
